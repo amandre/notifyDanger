@@ -1,0 +1,7 @@
+c:\users\andre\documents\visual studio 2015\Projects\notifyOfDanger\DBase\bin\Debug\DBase.dll
+c:\users\andre\documents\visual studio 2015\Projects\notifyOfDanger\DBase\bin\Debug\DBase.pdb
+c:\users\andre\documents\visual studio 2015\Projects\notifyOfDanger\DBase\bin\Debug\Danger.dll
+c:\users\andre\documents\visual studio 2015\Projects\notifyOfDanger\DBase\bin\Debug\Danger.pdb
+c:\users\andre\documents\visual studio 2015\Projects\notifyOfDanger\DBase\obj\Debug\DBase.dll
+c:\users\andre\documents\visual studio 2015\Projects\notifyOfDanger\DBase\obj\Debug\DBase.pdb
+c:\users\andre\documents\visual studio 2015\Projects\notifyOfDanger\DBase\obj\Debug\DBase.csprojResolveAssemblyReference.cache

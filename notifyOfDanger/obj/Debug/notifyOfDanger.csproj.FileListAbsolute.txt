@@ -1,0 +1,13 @@
+c:\users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDanger\bin\Debug\notifyOfDanger.exe.config
+c:\users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDanger\bin\Debug\notifyOfDanger.exe
+c:\users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDanger\bin\Debug\notifyOfDanger.pdb
+c:\users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDanger\obj\Debug\notifyOfDanger.csprojResolveAssemblyReference.cache
+c:\users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDanger\obj\Debug\notifyOfDanger.Form1.resources
+c:\users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDanger\obj\Debug\notifyOfDanger.Properties.Resources.resources
+c:\users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDanger\obj\Debug\notifyOfDanger.csproj.GenerateResource.Cache
+c:\users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDanger\obj\Debug\notifyOfDanger.exe
+c:\users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDanger\obj\Debug\notifyOfDanger.pdb
+c:\users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDanger\bin\Debug\Danger.dll
+c:\users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDanger\bin\Debug\Danger.pdb
+c:\users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDanger\bin\Debug\DBase.dll
+c:\users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDanger\bin\Debug\DBase.pdb
