@@ -33,7 +33,6 @@
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.logoName = new System.Windows.Forms.Label();
             this.notifyUsBtn = new System.Windows.Forms.Button();
-            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.getNotifBtn = new System.Windows.Forms.Button();
             this.whereTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,18 +43,21 @@
             this.label5 = new System.Windows.Forms.Label();
             this.whatTextBox = new System.Windows.Forms.TextBox();
             this.whenCalendar = new System.Windows.Forms.DateTimePicker();
+            this.countryBox = new System.Windows.Forms.ComboBox();
+            this.cityBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // notifyIcon1
             // 
             this.notifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.notifyIcon1.BalloonTipText = "Check what about is this notification";
-            this.notifyIcon1.BalloonTipTitle = "RECIEVED A NEW NOTIFICATION!";
+            this.notifyIcon1.BalloonTipText = "Click to show the accident notification";
+            this.notifyIcon1.BalloonTipTitle = "NEW ACCIDENT NOTIFICATION!";
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "notifyME!";
             this.notifyIcon1.Visible = true;
-            this.notifyIcon1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
-            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
+            this.notifyIcon1.BalloonTipClicked += new System.EventHandler(this.notifyIcon1_BalloonTipClosed);
+            this.notifyIcon1.BalloonTipClosed += new System.EventHandler(this.notifyIcon1_BalloonTipClosed);
+            this.notifyIcon1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseClick);
             // 
             // logoName
             // 
@@ -78,7 +80,6 @@
             this.notifyUsBtn.ForeColor = System.Drawing.SystemColors.Highlight;
             this.notifyUsBtn.Location = new System.Drawing.Point(29, 278);
             this.notifyUsBtn.Name = "notifyUsBtn";
-            this.helpProvider1.SetShowHelp(this.notifyUsBtn, false);
             this.notifyUsBtn.Size = new System.Drawing.Size(228, 66);
             this.notifyUsBtn.TabIndex = 1;
             this.notifyUsBtn.Text = "NOTIFY US!";
@@ -104,10 +105,11 @@
             // whereTextBox
             // 
             this.whereTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.whereTextBox.Location = new System.Drawing.Point(279, 226);
+            this.whereTextBox.Location = new System.Drawing.Point(279, 249);
             this.whereTextBox.Name = "whereTextBox";
             this.whereTextBox.Size = new System.Drawing.Size(228, 20);
             this.whereTextBox.TabIndex = 2;
+            this.whereTextBox.Text = "Write here street name";
             // 
             // label1
             // 
@@ -146,9 +148,9 @@
             this.label3.Location = new System.Drawing.Point(275, 204);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(240, 19);
+            this.label3.Size = new System.Drawing.Size(61, 19);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Where? (use Country/City/Street)";
+            this.label3.Text = "Where?";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // whatList
@@ -207,6 +209,27 @@
             this.whenCalendar.Size = new System.Drawing.Size(200, 20);
             this.whenCalendar.TabIndex = 6;
             // 
+            // countryBox
+            // 
+            this.countryBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.countryBox.FormattingEnabled = true;
+            this.countryBox.Location = new System.Drawing.Point(279, 226);
+            this.countryBox.Name = "countryBox";
+            this.countryBox.Size = new System.Drawing.Size(106, 21);
+            this.countryBox.TabIndex = 7;
+            this.countryBox.Text = "Country name";
+            this.countryBox.TextChanged += new System.EventHandler(this.countryBox_TextChanged);
+            // 
+            // cityBox
+            // 
+            this.cityBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cityBox.FormattingEnabled = true;
+            this.cityBox.Location = new System.Drawing.Point(391, 226);
+            this.cityBox.Name = "cityBox";
+            this.cityBox.Size = new System.Drawing.Size(116, 21);
+            this.cityBox.TabIndex = 8;
+            this.cityBox.Text = "City name";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -216,6 +239,8 @@
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(536, 385);
+            this.Controls.Add(this.cityBox);
+            this.Controls.Add(this.countryBox);
             this.Controls.Add(this.whenCalendar);
             this.Controls.Add(this.whatList);
             this.Controls.Add(this.whatTextBox);
@@ -246,7 +271,6 @@
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.Label logoName;
         private System.Windows.Forms.Button notifyUsBtn;
-        private System.Windows.Forms.HelpProvider helpProvider1;
         private System.Windows.Forms.Button getNotifBtn;
         private System.Windows.Forms.TextBox whereTextBox;
         private System.Windows.Forms.Label label1;
@@ -257,6 +281,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox whatTextBox;
         private System.Windows.Forms.DateTimePicker whenCalendar;
+        private System.Windows.Forms.ComboBox countryBox;
+        private System.Windows.Forms.ComboBox cityBox;
     }
 }
 
