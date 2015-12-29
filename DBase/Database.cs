@@ -26,33 +26,19 @@ namespace DBase
 
         public void insertDanger(Danger dan)
         {
-            string acc_type = dan.AccType;
-            string acc_location = dan.AccLocation;
-            DateTime acc_date = dan.AccDate;
-            string acc_descr = dan.AccDescr;
-
-            string commandText = "INSERT INTO situationsdb (acc_type, acc_location, acc_date, acc_descr) VALUES('"+@acc_type+"','"+@acc_location+"','"+@acc_date+"','"+@acc_descr+"');";
-
-                OdbcCommand command = new OdbcCommand(commandText, connection);
+            string commandText = "INSERT INTO situationsdb (acc_type,acc_location,acc_date,acc_descr) values(?,?,?,?);";
+            OdbcCommand command = new OdbcCommand(commandText, connection);
             
-
-            /*
-                command.Parameters.Add("@acc_type", OdbcType.Text);
-                command.Parameters["@acc_type"].Value = dan.AccType;
-                command.Parameters.Add("@acc_location", OdbcType.Text);
-                command.Parameters["@acc_location"].Value = dan.AccLocation;
-                command.Parameters.Add("@acc_date", OdbcType.DateTime);
-                command.Parameters["@acc_date"].Value = dan.AccDate;
-                command.Parameters.Add("@acc_descr", OdbcType.Text);
-                command.Parameters["@acc_descr"].Value = dan.AccDescr;
-                */
-            // Use AddWithValue to assign Demographics.
-            // SQL Server will implicitly convert strings into XML.
-            //  command.Parameters.AddWithValue("@demographics", demoXml);
-
-                try
+            command.Parameters.AddWithValue("acctype",dan.AccType);
+            command.Parameters.AddWithValue("acclocation",dan.AccLocation);
+            command.Parameters.AddWithValue("accdate",dan.AccDate);
+            command.Parameters.AddWithValue("accdescr",dan.AccDescr);
+            //command.ExecuteNonQuery();
+            try
                 {
                     connection.Open();
+                    Int32 rowsAffected = command.ExecuteNonQuery();
+                    Console.WriteLine("RowsAffected: {0}", rowsAffected);
                 }
 
                 catch (Exception)

@@ -48,12 +48,12 @@ namespace notifyOfDanger
         private void Form1_Load(object sender, EventArgs e)
         {
             whenCalendar.MinDate = DateTime.Now.AddDays(-1); // umozliwia zaznaczenie wypadku z dnia poprzedniego
-            whenCalendar.MaxDate = DateTime.Today;
+            whenCalendar.MaxDate = DateTime.Now;
         }
 
         private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            // Show the form when the user double clicks on the notify icon.
+            // Show the form when the user single or double clicks on the notify icon.
 
             // Set the WindowState to normal if the form is minimized.
             if (WindowState == FormWindowState.Minimized)
@@ -63,18 +63,19 @@ namespace notifyOfDanger
             Activate();
         }
 
-        public static string GetTimestamp(DateTime value)
+        /*public static string GetTimestamp(DateTime value)
         {
             return value.ToString("yyyy-MM-dd HH-mm-ss-ffff");
-        }
+        }*/
 
         private void notifyUsBtn_Click(object sender, EventArgs e)
         {
             Danger dan = new Danger();
+
             dan.AccType = whatList.Text;
             dan.AccDescr = whatTextBox.Text;
             //dan.AccDate = Convert.ToDateTime(whenCalendar.Value);
-            
+
             dan.AccDate = Convert.ToDateTime(whenCalendar.Value);
             //dan.AccTimestamp = GetTimestamp(dan.AccDate);
             dan.AccLocation = whereTextBox.Text;
@@ -90,6 +91,5 @@ namespace notifyOfDanger
         {
 
         }
-
     }
 }
