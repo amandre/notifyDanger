@@ -42,7 +42,7 @@ namespace notifyOfDanger
             countryBox.Items.Add(new Item("GER"));
             countryBox.Items.Add(new Item("EN"));
 
-            notifyIcon1.ShowBalloonTip(3000);
+            // notifyIcon1.ShowBalloonTip(3000);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -55,6 +55,7 @@ namespace notifyOfDanger
         {
             return value.ToString("yyyy-MM-dd HH-mm-ss-ffff");
         }*/
+        int accidentCounter = 0;
 
         private void notifyUsBtn_Click(object sender, EventArgs e)
         {
@@ -74,6 +75,15 @@ namespace notifyOfDanger
             whereTextBox.ResetText();
 
             db.insertDanger(dan);
+
+            // jesli biezacy licznik wypadkow w bazie jest mniejszy od najnowszego, to znaczy, ze zostala dokonana aktualizacja
+            if(accidentCounter < db.countAccidents())
+            {
+                notifyIcon1.BalloonTipText = db.giveAccidentDetails();
+                notifyIcon1.ShowBalloonTip(3000);
+                accidentCounter = db.countAccidents();
+            }
+            
         }
 
         private void getNotifBtn_Click(object sender, EventArgs e)

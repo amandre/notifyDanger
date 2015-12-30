@@ -33,7 +33,6 @@
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.logoName = new System.Windows.Forms.Label();
             this.notifyUsBtn = new System.Windows.Forms.Button();
-            this.getNotifBtn = new System.Windows.Forms.Button();
             this.whereTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -76,31 +75,16 @@
             // notifyUsBtn
             // 
             this.notifyUsBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.notifyUsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.notifyUsBtn.Font = new System.Drawing.Font("Myriad Pro Light", 15F, System.Drawing.FontStyle.Bold);
-            this.notifyUsBtn.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.notifyUsBtn.ForeColor = System.Drawing.SystemColors.Info;
             this.notifyUsBtn.Location = new System.Drawing.Point(29, 278);
             this.notifyUsBtn.Name = "notifyUsBtn";
-            this.notifyUsBtn.Size = new System.Drawing.Size(228, 66);
+            this.notifyUsBtn.Size = new System.Drawing.Size(478, 66);
             this.notifyUsBtn.TabIndex = 1;
             this.notifyUsBtn.Text = "NOTIFY US!";
-            this.notifyUsBtn.UseVisualStyleBackColor = true;
+            this.notifyUsBtn.UseVisualStyleBackColor = false;
             this.notifyUsBtn.Click += new System.EventHandler(this.notifyUsBtn_Click);
-            // 
-            // getNotifBtn
-            // 
-            this.getNotifBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.getNotifBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.getNotifBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.getNotifBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.getNotifBtn.Font = new System.Drawing.Font("Myriad Pro Light", 15F, System.Drawing.FontStyle.Bold);
-            this.getNotifBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.getNotifBtn.Location = new System.Drawing.Point(279, 278);
-            this.getNotifBtn.Name = "getNotifBtn";
-            this.getNotifBtn.Size = new System.Drawing.Size(228, 66);
-            this.getNotifBtn.TabIndex = 1;
-            this.getNotifBtn.Text = "GET NOTIFICATIONS";
-            this.getNotifBtn.UseVisualStyleBackColor = false;
-            this.getNotifBtn.Click += new System.EventHandler(this.getNotifBtn_Click);
             // 
             // whereTextBox
             // 
@@ -245,7 +229,6 @@
             this.Controls.Add(this.whatList);
             this.Controls.Add(this.whatTextBox);
             this.Controls.Add(this.whereTextBox);
-            this.Controls.Add(this.getNotifBtn);
             this.Controls.Add(this.notifyUsBtn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -271,7 +254,6 @@
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.Label logoName;
         private System.Windows.Forms.Button notifyUsBtn;
-        private System.Windows.Forms.Button getNotifBtn;
         private System.Windows.Forms.TextBox whereTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
