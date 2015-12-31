@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Domain;
 using DBase;
+using System.Timers;
 
 namespace notifyOfDanger
 {
@@ -29,7 +30,8 @@ namespace notifyOfDanger
                 return Name;
             }
         }
-
+        private System.Timers.Timer timer;
+        int accidentCounter = 0;
         public Form1()
         {
             InitializeComponent();
@@ -42,7 +44,26 @@ namespace notifyOfDanger
             countryBox.Items.Add(new Item("GER"));
             countryBox.Items.Add(new Item("EN"));
 
+            int wait = 10 * 1000;
+            timer = new System.Timers.Timer(wait);
+            timer.Start();
+            timer.Elapsed += checkForUpdates;
+
+
             // notifyIcon1.ShowBalloonTip(3000);
+        }
+
+        public void checkForUpdates(object sender, ElapsedEventArgs e)
+        {
+         
+            // if current accident counter is smaller than actual number of rows in db, it means that db has been updated
+            if (accidentCounter < db.countAccidents())
+            {
+                notifyIcon1.BalloonTipText = db.giveAccidentDetails();
+                notifyIcon1.ShowBalloonTip(3000);
+                accidentCounter = db.countAccidents(); // countAccidents returns the highest id from 'situationsdb' table
+                timer.Start();
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -55,7 +76,7 @@ namespace notifyOfDanger
         {
             return value.ToString("yyyy-MM-dd HH-mm-ss-ffff");
         }*/
-        int accidentCounter = 0;
+        
 
         private void notifyUsBtn_Click(object sender, EventArgs e)
         {
@@ -75,20 +96,7 @@ namespace notifyOfDanger
             whereTextBox.ResetText();
 
             db.insertDanger(dan);
-
-            // jesli biezacy licznik wypadkow w bazie jest mniejszy od najnowszego, to znaczy, ze zostala dokonana aktualizacja
-            if(accidentCounter < db.countAccidents())
-            {
-                notifyIcon1.BalloonTipText = db.giveAccidentDetails();
-                notifyIcon1.ShowBalloonTip(3000);
-                accidentCounter = db.countAccidents();
-            }
-            
-        }
-
-        private void getNotifBtn_Click(object sender, EventArgs e)
-        {
-
+            accidentCounter++;
         }
 
         private void notifyIcon1_MouseClick(object sender, MouseEventArgs e)
