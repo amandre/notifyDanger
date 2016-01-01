@@ -91,7 +91,7 @@
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Release\\notifyME Installer.msi"
+        "OutputFilename" = "8:Release\\notifyME.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -242,7 +242,7 @@
             }
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_C02D69ED01574B94AC78FE25F3587DF1"
             {
-            "DefaultLocation" = "8:[ProgramFilesFolder][Manufacturer]\\[ProductName]"
+            "DefaultLocation" = "8:[ProgramFilesFolder]\\[ProductName]"
             "Name" = "8:#1925"
             "AlwaysCreate" = "11:TRUE"
             "Condition" = "8:"
@@ -280,7 +280,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:notifyME Installer"
         "ProductCode" = "8:{3ACCACCC-151D-4F7E-986F-5B70C8C843F1}"
-        "PackageCode" = "8:{BEB1D367-2383-4757-9116-1EA9626A0790}"
+        "PackageCode" = "8:{839F0260-0EFE-4FB4-88B5-F3106E3EC4A2}"
         "UpgradeCode" = "8:{3E2A760C-B683-4314-B7C6-36825E5C830B}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -400,20 +400,6 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_F79D270445AA44BAAA5C24CBBE92DDC6"
-            {
-            "Name" = "8:Shortcut to User's Desktop"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_AE59120DDD24439B86230264494110CA"
-            "Folder" = "8:_AE59120DDD24439B86230264494110CA"
-            "WorkingFolder" = "8:_AE59120DDD24439B86230264494110CA"
-            "Icon" = "8:"
-            "Feature" = "8:"
-            }
         }
         "UserInterface"
         {
@@ -813,6 +799,34 @@
         }
         "ProjectOutput"
         {
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_19AF2B69225243969BFD750091F6C7C4"
+            {
+            "SourcePath" = "8:"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_AE59120DDD24439B86230264494110CA"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            "ProjectOutputGroupRegister" = "3:1"
+            "OutputConfiguration" = "8:"
+            "OutputGroupCanonicalName" = "8:RuntimeImplementation"
+            "OutputProjectGuid" = "8:{8C866654-7143-4E50-A881-A16A3838B0A2}"
+            "ShowKeyOutput" = "11:TRUE"
+                "ExcludeFilters"
+                {
+                }
+            }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_655885B02A464350A5DDEA3C8688E5AE"
             {
             "SourcePath" = "8:"
