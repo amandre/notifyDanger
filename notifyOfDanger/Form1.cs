@@ -44,7 +44,7 @@ namespace notifyOfDanger
             countryBox.Items.Add(new Item("GER"));
             countryBox.Items.Add(new Item("EN"));
 
-            int wait = 10 * 1000;
+            int wait = 3 * 1000;
             timer = new System.Timers.Timer(wait);
             timer.Start();
             timer.Elapsed += checkForUpdates;
