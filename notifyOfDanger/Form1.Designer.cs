@@ -44,6 +44,7 @@
             this.whenCalendar = new System.Windows.Forms.DateTimePicker();
             this.countryBox = new System.Windows.Forms.ComboBox();
             this.cityBox = new System.Windows.Forms.ComboBox();
+            this.flatNumber = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // notifyIcon1
@@ -91,7 +92,7 @@
             this.whereTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.whereTextBox.Location = new System.Drawing.Point(279, 249);
             this.whereTextBox.Name = "whereTextBox";
-            this.whereTextBox.Size = new System.Drawing.Size(228, 20);
+            this.whereTextBox.Size = new System.Drawing.Size(163, 20);
             this.whereTextBox.TabIndex = 2;
             this.whereTextBox.Text = "Write here street name";
             this.whereTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.whereTextBox_MouseClick);
@@ -220,6 +221,17 @@
             this.cityBox.Leave += new System.EventHandler(this.cityBox_Leave);
             this.cityBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cityBox_MouseClick);
             // 
+            // flatNumber
+            // 
+            this.flatNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.flatNumber.Location = new System.Drawing.Point(448, 249);
+            this.flatNumber.Name = "flatNumber";
+            this.flatNumber.Size = new System.Drawing.Size(59, 20);
+            this.flatNumber.TabIndex = 2;
+            this.flatNumber.Text = "flat number";
+            this.flatNumber.MouseClick += new System.Windows.Forms.MouseEventHandler(this.flatNumber_MouseClick);
+            this.flatNumber.Leave += new System.EventHandler(this.flatNumber_Leave);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -234,6 +246,7 @@
             this.Controls.Add(this.whenCalendar);
             this.Controls.Add(this.whatList);
             this.Controls.Add(this.whatTextBox);
+            this.Controls.Add(this.flatNumber);
             this.Controls.Add(this.whereTextBox);
             this.Controls.Add(this.notifyUsBtn);
             this.Controls.Add(this.label3);
@@ -271,6 +284,7 @@
         private System.Windows.Forms.DateTimePicker whenCalendar;
         private System.Windows.Forms.ComboBox countryBox;
         private System.Windows.Forms.ComboBox cityBox;
+        private System.Windows.Forms.TextBox flatNumber;
     }
 }
 

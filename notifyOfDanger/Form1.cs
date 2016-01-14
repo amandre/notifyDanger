@@ -49,7 +49,6 @@ namespace notifyOfDanger
             timer.Start();
             timer.Elapsed += checkForUpdates;
 
-             
             // notifyIcon1.ShowBalloonTip(3000);
         }
 
@@ -68,15 +67,9 @@ namespace notifyOfDanger
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            whenCalendar.MinDate = DateTime.Now.AddDays(-1); // ability to set yesterday's date
+            whenCalendar.MinDate = DateTime.Now;  //.AddDays(-1); // optional: ability to set yesterday's date
             whenCalendar.MaxDate = DateTime.Now;
-        }
-
-        /*public static string GetTimestamp(DateTime value)
-        {
-            return value.ToString("yyyy-MM-dd HH-mm-ss-ffff");
-        }*/
-        
+        }        
 
         private void notifyUsBtn_Click(object sender, EventArgs e)
         {
@@ -84,16 +77,14 @@ namespace notifyOfDanger
 
             dan.AccType = whatList.Text;
             dan.AccDescr = whatTextBox.Text;
-            //dan.AccDate = Convert.ToDateTime(whenCalendar.Value);
-
             dan.AccDate = Convert.ToDateTime(whenCalendar.Value);
-            //dan.AccTimestamp = GetTimestamp(dan.AccDate);
-            dan.AccLocation = countryBox.Text + "/" + cityBox.Text + "/" + whereTextBox.Text;
+            dan.AccLocation = countryBox.Text + "/" + cityBox.Text + "/" + whereTextBox.Text + "/" + flatNumber.Text;
             countryBox.ResetText();
             whatList.ResetText();
             whatTextBox.ResetText();
-            whenCalendar.Value = DateTime.Today;
+            //whenCalendar.Value = DateTime.Today;
             whereTextBox.ResetText();
+            flatNumber.ResetText();
 
             db.insertDanger(dan);
             accidentCounter++;
@@ -154,6 +145,14 @@ namespace notifyOfDanger
             countryBox.Text = "";
         }
 
+        private void flatNumber_Leave(object sender, EventArgs e)
+        {
+            if (flatNumber.Text == "")
+            {
+                flatNumber.Text = "flat num";
+            }
+        }
+
         private void whereTextBox_Leave(object sender, EventArgs e)
         {
             if (whereTextBox.Text == "")
@@ -181,11 +180,17 @@ namespace notifyOfDanger
         private void whereTextBox_MouseClick(object sender, MouseEventArgs e)
         {
             whereTextBox.Text = "";
+            flatNumber.Text = "";
         }
 
         private void cityBox_MouseClick(object sender, MouseEventArgs e)
         {
             cityBox.Text = "";
+        }
+
+        private void flatNumber_MouseClick(object sender, MouseEventArgs e)
+        {
+            flatNumber.Text = "";
         }
     }
 }
