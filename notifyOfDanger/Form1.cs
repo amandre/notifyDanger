@@ -49,7 +49,7 @@ namespace notifyOfDanger
             timer.Start();
             timer.Elapsed += checkForUpdates;
 
-
+             
             // notifyIcon1.ShowBalloonTip(3000);
         }
 
@@ -147,6 +147,45 @@ namespace notifyOfDanger
                 cityBox.Items.Add(new Item("Birmingham"));
                 cityBox.Items.Add(new Item("York"));
             }
+        }
+
+        private void countryBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            countryBox.Text = "";
+        }
+
+        private void whereTextBox_Leave(object sender, EventArgs e)
+        {
+            if (whereTextBox.Text == "")
+            {
+                whereTextBox.Text = "Write here the street name";
+            }
+        }
+
+        private void cityBox_Leave(object sender, EventArgs e)
+        {
+            if (cityBox.Text == "")
+            {
+                cityBox.Text = "City name";
+            }
+        }
+
+        private void countryBox_Leave(object sender, EventArgs e)
+        {
+            if (countryBox.Text == "")
+            {
+                countryBox.Text = "Country name";
+            }
+        }
+
+        private void whereTextBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            whereTextBox.Text = "";
+        }
+
+        private void cityBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            cityBox.Text = "";
         }
     }
 }

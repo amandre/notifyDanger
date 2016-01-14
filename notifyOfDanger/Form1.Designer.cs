@@ -94,6 +94,8 @@
             this.whereTextBox.Size = new System.Drawing.Size(228, 20);
             this.whereTextBox.TabIndex = 2;
             this.whereTextBox.Text = "Write here street name";
+            this.whereTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.whereTextBox_MouseClick);
+            this.whereTextBox.Leave += new System.EventHandler(this.whereTextBox_Leave);
             // 
             // label1
             // 
@@ -203,6 +205,8 @@
             this.countryBox.TabIndex = 7;
             this.countryBox.Text = "Country name";
             this.countryBox.TextChanged += new System.EventHandler(this.countryBox_TextChanged);
+            this.countryBox.Leave += new System.EventHandler(this.countryBox_Leave);
+            this.countryBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.countryBox_MouseClick);
             // 
             // cityBox
             // 
@@ -213,6 +217,8 @@
             this.cityBox.Size = new System.Drawing.Size(116, 21);
             this.cityBox.TabIndex = 8;
             this.cityBox.Text = "City name";
+            this.cityBox.Leave += new System.EventHandler(this.cityBox_Leave);
+            this.cityBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cityBox_MouseClick);
             // 
             // Form1
             // 
