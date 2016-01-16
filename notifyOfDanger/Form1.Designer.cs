@@ -45,202 +45,163 @@
             this.countryBox = new System.Windows.Forms.ComboBox();
             this.cityBox = new System.Windows.Forms.ComboBox();
             this.flatNumber = new System.Windows.Forms.TextBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fIleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.languageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.polskiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // notifyIcon1
             // 
             this.notifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.notifyIcon1.BalloonTipText = "Click to show the accident notification";
-            this.notifyIcon1.BalloonTipTitle = "NEW ACCIDENT NOTIFICATION!";
-            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
-            this.notifyIcon1.Text = "notifyME!";
-            this.notifyIcon1.Visible = true;
+            resources.ApplyResources(this.notifyIcon1, "notifyIcon1");
             this.notifyIcon1.BalloonTipClicked += new System.EventHandler(this.notifyIcon1_BalloonTipClosed);
             this.notifyIcon1.BalloonTipClosed += new System.EventHandler(this.notifyIcon1_BalloonTipClosed);
             this.notifyIcon1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseClick);
             // 
             // logoName
             // 
-            this.logoName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.logoName.AutoSize = true;
-            this.logoName.Font = new System.Drawing.Font("Oswald", 29.75F);
+            resources.ApplyResources(this.logoName, "logoName");
             this.logoName.ForeColor = System.Drawing.Color.Snow;
-            this.logoName.Location = new System.Drawing.Point(139, 28);
-            this.logoName.Margin = new System.Windows.Forms.Padding(0);
             this.logoName.Name = "logoName";
-            this.logoName.Size = new System.Drawing.Size(258, 60);
-            this.logoName.TabIndex = 0;
-            this.logoName.Text = "notifyOfDanger";
-            this.logoName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // notifyUsBtn
             // 
-            this.notifyUsBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            resources.ApplyResources(this.notifyUsBtn, "notifyUsBtn");
             this.notifyUsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.notifyUsBtn.Font = new System.Drawing.Font("Myriad Pro Light", 15F, System.Drawing.FontStyle.Bold);
             this.notifyUsBtn.ForeColor = System.Drawing.SystemColors.Info;
-            this.notifyUsBtn.Location = new System.Drawing.Point(29, 278);
             this.notifyUsBtn.Name = "notifyUsBtn";
-            this.notifyUsBtn.Size = new System.Drawing.Size(478, 66);
-            this.notifyUsBtn.TabIndex = 1;
-            this.notifyUsBtn.Text = "NOTIFY US!";
             this.notifyUsBtn.UseVisualStyleBackColor = false;
             this.notifyUsBtn.Click += new System.EventHandler(this.notifyUsBtn_Click);
             // 
             // whereTextBox
             // 
-            this.whereTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.whereTextBox.Location = new System.Drawing.Point(279, 249);
+            resources.ApplyResources(this.whereTextBox, "whereTextBox");
             this.whereTextBox.Name = "whereTextBox";
-            this.whereTextBox.Size = new System.Drawing.Size(163, 20);
-            this.whereTextBox.TabIndex = 2;
-            this.whereTextBox.Text = "Write here street name";
             this.whereTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.whereTextBox_MouseClick);
             this.whereTextBox.Leave += new System.EventHandler(this.whereTextBox_Leave);
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Open Sans", 10F, System.Drawing.FontStyle.Bold);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.ForeColor = System.Drawing.Color.Snow;
-            this.label1.Location = new System.Drawing.Point(131, 144);
-            this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "What happened?";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Open Sans", 10F, System.Drawing.FontStyle.Bold);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.ForeColor = System.Drawing.Color.Snow;
-            this.label2.Location = new System.Drawing.Point(275, 144);
-            this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 19);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "When?";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Open Sans", 10F, System.Drawing.FontStyle.Bold);
+            resources.ApplyResources(this.label3, "label3");
             this.label3.ForeColor = System.Drawing.Color.Snow;
-            this.label3.Location = new System.Drawing.Point(275, 204);
-            this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 19);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Where?";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // whatList
             // 
-            this.whatList.Anchor = System.Windows.Forms.AnchorStyles.None;
+            resources.ApplyResources(this.whatList, "whatList");
             this.whatList.FormattingEnabled = true;
-            this.whatList.Location = new System.Drawing.Point(128, 168);
+            this.whatList.Items.AddRange(new object[] {
+            resources.GetString("whatList.Items"),
+            resources.GetString("whatList.Items1"),
+            resources.GetString("whatList.Items2"),
+            resources.GetString("whatList.Items3"),
+            resources.GetString("whatList.Items4")});
             this.whatList.Name = "whatList";
-            this.whatList.Size = new System.Drawing.Size(129, 21);
-            this.whatList.TabIndex = 4;
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Open Sans", 10F, System.Drawing.FontStyle.Bold);
+            resources.ApplyResources(this.label4, "label4");
             this.label4.ForeColor = System.Drawing.Color.Snow;
-            this.label4.Location = new System.Drawing.Point(28, 168);
-            this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 19);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Danger type:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Open Sans", 10F, System.Drawing.FontStyle.Bold);
+            resources.ApplyResources(this.label5, "label5");
             this.label5.ForeColor = System.Drawing.Color.Snow;
-            this.label5.Location = new System.Drawing.Point(28, 204);
-            this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(236, 19);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Detailed description (optionally):";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // whatTextBox
             // 
-            this.whatTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.whatTextBox.Location = new System.Drawing.Point(29, 226);
-            this.whatTextBox.Multiline = true;
+            resources.ApplyResources(this.whatTextBox, "whatTextBox");
             this.whatTextBox.Name = "whatTextBox";
-            this.whatTextBox.Size = new System.Drawing.Size(228, 43);
-            this.whatTextBox.TabIndex = 2;
             // 
             // whenCalendar
             // 
-            this.whenCalendar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.whenCalendar.Location = new System.Drawing.Point(279, 167);
+            resources.ApplyResources(this.whenCalendar, "whenCalendar");
             this.whenCalendar.MaxDate = new System.DateTime(2025, 12, 31, 0, 0, 0, 0);
             this.whenCalendar.MinDate = new System.DateTime(2015, 1, 1, 0, 0, 0, 0);
             this.whenCalendar.Name = "whenCalendar";
-            this.whenCalendar.Size = new System.Drawing.Size(200, 20);
-            this.whenCalendar.TabIndex = 6;
             // 
             // countryBox
             // 
-            this.countryBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            resources.ApplyResources(this.countryBox, "countryBox");
             this.countryBox.FormattingEnabled = true;
-            this.countryBox.Location = new System.Drawing.Point(279, 226);
             this.countryBox.Name = "countryBox";
-            this.countryBox.Size = new System.Drawing.Size(106, 21);
-            this.countryBox.TabIndex = 7;
-            this.countryBox.Text = "Country name";
             this.countryBox.TextChanged += new System.EventHandler(this.countryBox_TextChanged);
             this.countryBox.Leave += new System.EventHandler(this.countryBox_Leave);
             this.countryBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.countryBox_MouseClick);
             // 
             // cityBox
             // 
-            this.cityBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            resources.ApplyResources(this.cityBox, "cityBox");
             this.cityBox.FormattingEnabled = true;
-            this.cityBox.Location = new System.Drawing.Point(391, 226);
             this.cityBox.Name = "cityBox";
-            this.cityBox.Size = new System.Drawing.Size(116, 21);
-            this.cityBox.TabIndex = 8;
-            this.cityBox.Text = "City name";
             this.cityBox.Leave += new System.EventHandler(this.cityBox_Leave);
             this.cityBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cityBox_MouseClick);
             // 
             // flatNumber
             // 
-            this.flatNumber.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.flatNumber.Location = new System.Drawing.Point(448, 249);
+            resources.ApplyResources(this.flatNumber, "flatNumber");
             this.flatNumber.Name = "flatNumber";
-            this.flatNumber.Size = new System.Drawing.Size(59, 20);
-            this.flatNumber.TabIndex = 2;
-            this.flatNumber.Text = "flat number";
             this.flatNumber.MouseClick += new System.Windows.Forms.MouseEventHandler(this.flatNumber_MouseClick);
             this.flatNumber.Leave += new System.EventHandler(this.flatNumber_Leave);
             // 
+            // menuStrip1
+            // 
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fIleToolStripMenuItem});
+            this.menuStrip1.Name = "menuStrip1";
+            // 
+            // fIleToolStripMenuItem
+            // 
+            resources.ApplyResources(this.fIleToolStripMenuItem, "fIleToolStripMenuItem");
+            this.fIleToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.languageToolStripMenuItem});
+            this.fIleToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.fIleToolStripMenuItem.Name = "fIleToolStripMenuItem";
+            // 
+            // languageToolStripMenuItem
+            // 
+            resources.ApplyResources(this.languageToolStripMenuItem, "languageToolStripMenuItem");
+            this.languageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.englishToolStripMenuItem,
+            this.polskiToolStripMenuItem});
+            this.languageToolStripMenuItem.Name = "languageToolStripMenuItem";
+            // 
+            // englishToolStripMenuItem
+            // 
+            resources.ApplyResources(this.englishToolStripMenuItem, "englishToolStripMenuItem");
+            this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
+            this.englishToolStripMenuItem.Click += new System.EventHandler(this.englishToolStripMenuItem_Click);
+            // 
+            // polskiToolStripMenuItem
+            // 
+            resources.ApplyResources(this.polskiToolStripMenuItem, "polskiToolStripMenuItem");
+            this.polskiToolStripMenuItem.Name = "polskiToolStripMenuItem";
+            this.polskiToolStripMenuItem.Click += new System.EventHandler(this.polskiToolStripMenuItem_Click);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.AutoSize = true;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Highlight;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(536, 385);
             this.Controls.Add(this.cityBox);
             this.Controls.Add(this.countryBox);
             this.Controls.Add(this.whenCalendar);
@@ -255,14 +216,14 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.logoName);
+            this.Controls.Add(this.menuStrip1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MinimumSize = new System.Drawing.Size(552, 385);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,6 +246,11 @@
         private System.Windows.Forms.ComboBox countryBox;
         private System.Windows.Forms.ComboBox cityBox;
         private System.Windows.Forms.TextBox flatNumber;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fIleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem languageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem englishToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem polskiToolStripMenuItem;
     }
 }
 

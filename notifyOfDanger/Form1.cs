@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Globalization;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 using Domain;
 using DBase;
@@ -16,7 +12,7 @@ namespace notifyOfDanger
     public partial class Form1 : Form
     {
         Database db = new Database();
-
+        public string Language = Properties.Settings.Default.Lang;
         private class Item
         {
             public string Name;
@@ -32,14 +28,11 @@ namespace notifyOfDanger
         }
         private System.Timers.Timer timer;
         int accidentCounter = 0;
+
         public Form1()
         {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(Language);
             InitializeComponent();
-            whatList.Items.Add(new Item("Fire"));
-            whatList.Items.Add(new Item("Car crash"));
-            whatList.Items.Add(new Item("Flood"));
-            whatList.Items.Add(new Item("Earthquake"));
-            whatList.Items.Add(new Item("Other"));
             countryBox.Items.Add(new Item("PL"));
             countryBox.Items.Add(new Item("GER"));
             countryBox.Items.Add(new Item("EN"));
@@ -62,6 +55,15 @@ namespace notifyOfDanger
                 notifyIcon1.ShowBalloonTip(3000);
                 accidentCounter = db.countAccidents(); // countAccidents returns the highest id from 'situationsdb' table
                 timer.Start();
+            }
+        }
+        
+        private void changeLanguage(string lang)
+        {
+            foreach (Control c in this.Controls)
+            {
+                ComponentResourceManager resources = new ComponentResourceManager(typeof(Form1));
+                resources.ApplyResources(c, c.Name, new CultureInfo(lang));
             }
         }
 
@@ -143,13 +145,21 @@ namespace notifyOfDanger
         private void countryBox_MouseClick(object sender, MouseEventArgs e)
         {
             countryBox.Text = "";
+            cityBox.Text = "";
         }
 
         private void flatNumber_Leave(object sender, EventArgs e)
         {
             if (flatNumber.Text == "")
             {
-                flatNumber.Text = "flat num";
+                if (Properties.Settings.Default.Lang == "pl-PL")
+                {
+                    flatNumber.Text = "Nr domu";
+                }
+                else
+                {
+                    flatNumber.Text = "Flat num";
+                }
             }
         }
 
@@ -157,7 +167,14 @@ namespace notifyOfDanger
         {
             if (whereTextBox.Text == "")
             {
-                whereTextBox.Text = "Write here the street name";
+                if (Properties.Settings.Default.Lang == "pl-PL")
+                {
+                    whereTextBox.Text = "Wpisz tutaj nazwę ulicy";
+                }
+                else
+                {
+                    whereTextBox.Text = "Write here the street name";
+                }
             }
         }
 
@@ -165,7 +182,14 @@ namespace notifyOfDanger
         {
             if (cityBox.Text == "")
             {
-                cityBox.Text = "City name";
+                if (Properties.Settings.Default.Lang == "pl-PL")
+                {
+                    cityBox.Text = "Nazwa miasta";
+                }
+                else
+                {
+                    cityBox.Text = "City name";
+                }
             }
         }
 
@@ -173,7 +197,16 @@ namespace notifyOfDanger
         {
             if (countryBox.Text == "")
             {
-                countryBox.Text = "Country name";
+                if (Properties.Settings.Default.Lang == "pl-PL")
+                {
+                    countryBox.Text = "Nazwa państwa";
+                    cityBox.Text = "Nazwa miasta";
+                }
+                else
+                {
+                    countryBox.Text = "Country name";
+                    cityBox.Text = "City name";
+                }
             }
         }
 
@@ -191,6 +224,28 @@ namespace notifyOfDanger
         private void flatNumber_MouseClick(object sender, MouseEventArgs e)
         {
             flatNumber.Text = "";
+        }
+
+        private void englishToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string lang = "en-US";
+            englishToolStripMenuItem.Checked = true;
+            polskiToolStripMenuItem.Checked = false;
+            changeLanguage(lang);
+            // zapisanie jezyka jako domyslny
+            Properties.Settings.Default.Lang = lang ;
+            Properties.Settings.Default.Save();
+        }
+
+        private void polskiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string lang = "pl-PL";
+            englishToolStripMenuItem.Checked = false;
+            polskiToolStripMenuItem.Checked = true;
+            changeLanguage(lang);
+            // zapisanie jezyka jako domyslny
+            Properties.Settings.Default.Lang = lang;
+            Properties.Settings.Default.Save();
         }
     }
 }
