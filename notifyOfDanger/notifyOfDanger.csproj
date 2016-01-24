@@ -54,7 +54,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.en-US.resx">
+    <EmbeddedResource Include="Form1.en-GB.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.pl-PL.resx">
@@ -86,9 +86,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Danger\Domain.csproj">
+    <ProjectReference Include="..\Danger\Dangers.csproj">
       <Project>{5e7befe4-cfe3-4965-80c4-4b8eb561794c}</Project>
-      <Name>Domain</Name>
+      <Name>Dangers</Name>
     </ProjectReference>
     <ProjectReference Include="..\DBase\DBase.csproj">
       <Project>{36c6a37d-b9ea-42da-b6af-ce6f3c1edef8}</Project>

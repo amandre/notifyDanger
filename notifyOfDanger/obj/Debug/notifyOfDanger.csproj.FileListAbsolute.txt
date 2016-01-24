@@ -14,6 +14,6 @@ c:\users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDang
 C:\Users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDanger\bin\Debug\pl-PL\notifyOfDanger.resources.dll
 C:\Users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDanger\obj\Debug\notifyOfDanger.Form1.pl-PL.resources
 C:\Users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDanger\obj\Debug\pl-PL\notifyOfDanger.resources.dll
-C:\Users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDanger\bin\Debug\en-US\notifyOfDanger.resources.dll
-C:\Users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDanger\obj\Debug\notifyOfDanger.Form1.en-US.resources
-C:\Users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDanger\obj\Debug\en-US\notifyOfDanger.resources.dll
+C:\Users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDanger\bin\Debug\en-GB\notifyOfDanger.resources.dll
+C:\Users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDanger\obj\Debug\notifyOfDanger.Form1.en-GB.resources
+C:\Users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDanger\obj\Debug\en-GB\notifyOfDanger.resources.dll

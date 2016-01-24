@@ -11,3 +11,15 @@ C:\Users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDang
 C:\Users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDanger\obj\Release\notifyOfDanger.csproj.GenerateResource.Cache
 C:\Users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDanger\obj\Release\notifyOfDanger.exe
 C:\Users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDanger\obj\Release\notifyOfDanger.pdb
+C:\Users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDanger\bin\Release\aa\notifyOfDanger.resources.dll
+C:\Users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDanger\bin\Release\en-GB\notifyOfDanger.resources.dll
+C:\Users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDanger\bin\Release\en-US\notifyOfDanger.resources.dll
+C:\Users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDanger\bin\Release\pl-PL\notifyOfDanger.resources.dll
+C:\Users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDanger\obj\Release\notifyOfDanger.Form1.aa.resources
+C:\Users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDanger\obj\Release\notifyOfDanger.Form1.en-GB.resources
+C:\Users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDanger\obj\Release\notifyOfDanger.Form1.en-US.resources
+C:\Users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDanger\obj\Release\notifyOfDanger.Form1.pl-PL.resources
+C:\Users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDanger\obj\Release\aa\notifyOfDanger.resources.dll
+C:\Users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDanger\obj\Release\en-GB\notifyOfDanger.resources.dll
+C:\Users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDanger\obj\Release\en-US\notifyOfDanger.resources.dll
+C:\Users\andre\documents\visual studio 2015\Projects\notifyOfDanger\notifyOfDanger\obj\Release\pl-PL\notifyOfDanger.resources.dll

@@ -36,7 +36,6 @@
             this.whereTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.whatList = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -45,20 +44,17 @@
             this.countryBox = new System.Windows.Forms.ComboBox();
             this.cityBox = new System.Windows.Forms.ComboBox();
             this.flatNumber = new System.Windows.Forms.TextBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fIleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.languageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.polskiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            this.polski = new System.Windows.Forms.PictureBox();
+            this.english = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.polski)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.english)).BeginInit();
             this.SuspendLayout();
             // 
             // notifyIcon1
             // 
             this.notifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             resources.ApplyResources(this.notifyIcon1, "notifyIcon1");
-            this.notifyIcon1.BalloonTipClicked += new System.EventHandler(this.notifyIcon1_BalloonTipClosed);
-            this.notifyIcon1.BalloonTipClosed += new System.EventHandler(this.notifyIcon1_BalloonTipClosed);
             this.notifyIcon1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseClick);
             // 
             // logoName
@@ -95,22 +91,10 @@
             this.label2.ForeColor = System.Drawing.Color.Snow;
             this.label2.Name = "label2";
             // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.ForeColor = System.Drawing.Color.Snow;
-            this.label3.Name = "label3";
-            // 
             // whatList
             // 
             resources.ApplyResources(this.whatList, "whatList");
             this.whatList.FormattingEnabled = true;
-            this.whatList.Items.AddRange(new object[] {
-            resources.GetString("whatList.Items"),
-            resources.GetString("whatList.Items1"),
-            resources.GetString("whatList.Items2"),
-            resources.GetString("whatList.Items3"),
-            resources.GetString("whatList.Items4")});
             this.whatList.Name = "whatList";
             // 
             // label4
@@ -161,47 +145,35 @@
             this.flatNumber.MouseClick += new System.Windows.Forms.MouseEventHandler(this.flatNumber_MouseClick);
             this.flatNumber.Leave += new System.EventHandler(this.flatNumber_Leave);
             // 
-            // menuStrip1
+            // polski
             // 
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fIleToolStripMenuItem});
-            this.menuStrip1.Name = "menuStrip1";
+            resources.ApplyResources(this.polski, "polski");
+            this.polski.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.polski.Name = "polski";
+            this.polski.TabStop = false;
+            this.polski.Click += new System.EventHandler(this.polski_Click);
             // 
-            // fIleToolStripMenuItem
+            // english
             // 
-            resources.ApplyResources(this.fIleToolStripMenuItem, "fIleToolStripMenuItem");
-            this.fIleToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.languageToolStripMenuItem});
-            this.fIleToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.fIleToolStripMenuItem.Name = "fIleToolStripMenuItem";
+            resources.ApplyResources(this.english, "english");
+            this.english.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.english.Name = "english";
+            this.english.TabStop = false;
+            this.english.Click += new System.EventHandler(this.english_Click);
             // 
-            // languageToolStripMenuItem
+            // label6
             // 
-            resources.ApplyResources(this.languageToolStripMenuItem, "languageToolStripMenuItem");
-            this.languageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.englishToolStripMenuItem,
-            this.polskiToolStripMenuItem});
-            this.languageToolStripMenuItem.Name = "languageToolStripMenuItem";
-            // 
-            // englishToolStripMenuItem
-            // 
-            resources.ApplyResources(this.englishToolStripMenuItem, "englishToolStripMenuItem");
-            this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
-            this.englishToolStripMenuItem.Click += new System.EventHandler(this.englishToolStripMenuItem_Click);
-            // 
-            // polskiToolStripMenuItem
-            // 
-            resources.ApplyResources(this.polskiToolStripMenuItem, "polskiToolStripMenuItem");
-            this.polskiToolStripMenuItem.Name = "polskiToolStripMenuItem";
-            this.polskiToolStripMenuItem.Click += new System.EventHandler(this.polskiToolStripMenuItem_Click);
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.ForeColor = System.Drawing.Color.Snow;
+            this.label6.Name = "label6";
             // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.Highlight;
+            this.Controls.Add(this.english);
+            this.Controls.Add(this.polski);
             this.Controls.Add(this.cityBox);
             this.Controls.Add(this.countryBox);
             this.Controls.Add(this.whenCalendar);
@@ -210,20 +182,18 @@
             this.Controls.Add(this.flatNumber);
             this.Controls.Add(this.whereTextBox);
             this.Controls.Add(this.notifyUsBtn);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.logoName);
-            this.Controls.Add(this.menuStrip1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MainMenuStrip = this.menuStrip1;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.polski)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.english)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,7 +207,6 @@
         private System.Windows.Forms.TextBox whereTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox whatList;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -246,11 +215,9 @@
         private System.Windows.Forms.ComboBox countryBox;
         private System.Windows.Forms.ComboBox cityBox;
         private System.Windows.Forms.TextBox flatNumber;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem fIleToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem languageToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem englishToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem polskiToolStripMenuItem;
+        private System.Windows.Forms.PictureBox polski;
+        private System.Windows.Forms.PictureBox english;
+        private System.Windows.Forms.Label label6;
     }
 }
 

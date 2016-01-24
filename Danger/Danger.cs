@@ -1,14 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Domain
+namespace Dangers
 {
+    /// <summary>
+    ///  Class Danger describes the danger and its specified information.
+    ///  These information are:
+    ///  accTimestamp            time when danger occured
+    ///  accType                 type of the danger
+    ///  accLocation             location where this danger had place
+    ///  accDescr                briefly describes what exactely happened
+    /// </summary>
     public class Danger
     {
-        DateTime accDate; // accident date
+        /// accident date
+        DateTime accDate;
         string accTimestamp;
         string accType;
         string accLocation;

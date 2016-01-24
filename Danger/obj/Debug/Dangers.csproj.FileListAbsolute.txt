@@ -1,0 +1,5 @@
+C:\Users\andre\documents\visual studio 2015\Projects\notifyOfDanger\Danger\bin\Debug\Danger.dll
+C:\Users\andre\documents\visual studio 2015\Projects\notifyOfDanger\Danger\bin\Debug\Danger.pdb
+C:\Users\andre\documents\visual studio 2015\Projects\notifyOfDanger\Danger\obj\Debug\Dangers.csprojResolveAssemblyReference.cache
+C:\Users\andre\documents\visual studio 2015\Projects\notifyOfDanger\Danger\obj\Debug\Danger.dll
+C:\Users\andre\documents\visual studio 2015\Projects\notifyOfDanger\Danger\obj\Debug\Danger.pdb
